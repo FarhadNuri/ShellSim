@@ -1,0 +1,68 @@
+# FileSystem Simulator Demo Script
+# Copy and paste these commands one by one to see the filesystem in action
+
+# Basic directory operations
+mkdir documents
+mkdir photos  
+mkdir projects
+ls
+
+# Navigate into documents
+cd documents
+pwd
+mkdir personal
+mkdir work
+touch resume.txt
+touch cover_letter.txt
+ls
+
+# Create and edit files
+echo "John Doe - Software Engineer" > resume.txt
+echo "Experienced C++ developer" >> resume.txt
+cat resume.txt
+
+# Copy and move operations
+cp resume.txt backup_resume.txt
+mv cover_letter.txt application_letter.txt
+ls
+
+# Navigate to projects directory
+cd ../projects
+mkdir cpp_projects
+mkdir python_projects
+cd cpp_projects
+touch main.cpp
+touch utils.h
+echo "#include <iostream>" > main.cpp
+echo "int main() { return 0; }" >> main.cpp
+cat main.cpp
+
+# Show directory tree
+cd /
+tree
+
+# Search functionality
+find cpp
+find resume
+
+# Navigation shortcuts
+cd ~
+pwd
+cd /projects/cpp_projects
+pwd
+cd -
+pwd
+cd ..
+pwd
+
+# Clean up demonstration
+cd /
+rm documents/personal
+rm documents/work
+rm documents
+rm photos
+rm projects
+ls
+
+# Exit the program
+exit

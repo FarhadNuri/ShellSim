@@ -1,0 +1,43 @@
+# Compiled executables
+filesystem
+filesystem.exe
+*.exe
+
+# Object files
+*.o
+*.obj
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Temporary files
+*~
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.vcxproj*
+*.sln
+
+# Build directories
+build/
+bin/
+obj/
+
+# Log files
+*.log
+
+# Core dumps
+core
+*.core
+
+# Backup files
+*.bak
+*.backup
