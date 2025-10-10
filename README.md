@@ -1,3 +1,6 @@
+# ShellSim – Unix/Linux CLI File System
+
+
 **ShellSim** is a high-performance, in-memory file system simulator built in C++ that mimics Unix-like file operations with an interactive command-line interface. This project demonstrates advanced data structures, memory management, and system programming concepts.
 
 ## Features
@@ -25,26 +28,26 @@
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                    FileSystem Class                        │
+│                    FileSystem Class                         │
 ├─────────────────────────────────────────────────────────────┤
-│  - root: FileNode*           (Root directory)              │
-│  - currentDir: FileNode*     (Current working directory)   │
-│  - previousDir: FileNode*    (Previous directory)          │
-│  - homeDir: FileNode*        (User home directory)         │
+│  - root: FileNode*           (Root directory)               │
+│  - currentDir: FileNode*     (Current working directory)    │
+│  - previousDir: FileNode*    (Previous directory)           │
+│  - homeDir: FileNode*        (User home directory)          │
 └─────────────────────────────────────────────────────────────┘
                               │
                               ▼
 ┌─────────────────────────────────────────────────────────────┐
-│                     FileNode Structure                     │
+│                     FileNode Structure                      │
 ├─────────────────────────────────────────────────────────────┤
-│  - name: string              (File/directory name)         │
-│  - type: string              ("file" or "folder")          │
-│  - size: int                 (File size in bytes)          │
-│  - content: string           (File content)                │
-│  - createdAt: string         (Creation timestamp)          │
-│  - parent: FileNode*         (Parent directory)            │
-│  - children: vector<FileNode*>     (Child nodes)           │
-│  - childMap: unordered_map<string, FileNode*> (Fast lookup)│
+│  - name: string              (File/directory name)          │
+│  - type: string              ("file" or "folder")           │
+│  - size: int                 (File size in bytes)           │
+│  - content: string           (File content)                 │
+│  - createdAt: string         (Creation timestamp)           │
+│  - parent: FileNode*         (Parent directory)             │
+│  - children: vector<FileNode*>     (Child nodes)            │
+│  - childMap: unordered_map<string, FileNode*> (Fast lookup) │
 └─────────────────────────────────────────────────────────────┘
 ```
 
@@ -87,23 +90,23 @@ make
 
 ## Command Reference
 
-| Command | Syntax                | Description                      | Example                    |
-|---------|----------------------|----------------------------------|----------------------------|
-| `mkdir` | `mkdir <name>`       | Create a new directory           | `mkdir documents`          |
-| `touch` | `touch <name>`       | Create a new empty file          | `touch readme.txt`         |
-| `cd`    | `cd <path>`          | Change directory                 | `cd documents`             |
-| `ls`    | `ls`                 | List directory contents          | `ls`                       |
-| `rm`    | `rm <name>`          | Remove file or directory         | `rm oldfile.txt`           |
-| `cat`   | `cat <name>`         | Display file contents            | `cat readme.txt`           |
-| `pwd`   | `pwd`                | Show current directory path      | `pwd`                      |
-| `echo`  | `echo "text" > file` | Write content to file            | `echo "Hello" > test.txt`  |
-| `echo`  | `echo "text" >> file`| Append content to file           | `echo "World" >> test.txt` |
-| `cp`    | `cp <source> <dest>` | Copy file or directory           | `cp file1.txt file2.txt`   |
+| Command | Syntax               | Description                      | Example                     |
+|---------|----------------------|----------------------------------|-----------------------------|
+| `mkdir` | `mkdir <name>`       | Create a new directory           | `mkdir documents`           |
+| `touch` | `touch <name>`       | Create a new empty file          | `touch readme.txt`          |
+| `cd`    | `cd <path>`          | Change directory                 | `cd documents`              |
+| `ls`    | `ls`                 | List directory contents          | `ls`                        |
+| `rm`    | `rm <name>`          | Remove file or directory         | `rm oldfile.txt`            |
+| `cat`   | `cat <name>`         | Display file contents            | `cat readme.txt`            |
+| `pwd`   | `pwd`                | Show current directory path      | `pwd`                       |
+| `echo`  | `echo "text" > file` | Write content to file            | `echo "Hello" > test.txt`   |
+| `echo`  | `echo "text" >> file`| Append content to file           | `echo "World" >> test.txt`  |
+| `cp`    | `cp <source> <dest>` | Copy file or directory           | `cp file1.txt file2.txt`    |
 | `mv`    | `mv <old> <new>`     | Move/rename file or directory    | `mv oldname.txt newname.txt`|
-| `find`  | `find <pattern>`     | Search for files/directories     | `find readme`              |
-| `tree`  | `tree`               | Display directory tree           | `tree`                     |
-| `help`  | `help`               | Show command help                | `help`                     |
-| `exit`  | `exit`               | Exit the program                 | `exit`                     |
+| `find`  | `find <pattern>`     | Search for files/directories     | `find readme`               |
+| `tree`  | `tree`               | Display directory tree           | `tree`                      |
+| `help`  | `help`               | Show command help                | `help`                      |
+| `exit`  | `exit`               | Exit the program                 | `exit`                      |
 
 ### Special Path Navigation
 - `cd ..` - Go to parent directory
@@ -381,5 +384,6 @@ touch file/with/slashes
 - Email: farhadnuri559@gmail.com
 
 ---
+
 
 **Star this repository if you found it helpful!**
